@@ -1,24 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class KameraKontrol : MonoBehaviour
 {
-    public Transform topunT;
+    [SerializeField] private Transform _ballT;
 
     private void LateUpdate()
     {
-        if (topunT.position.y>transform.position.y)
+        if (_ballT.position.y > transform.position.y)
         {
-            transform.position = new Vector3(transform.position.x, topunT.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x, _ballT.position.y, transform.position.z);
         }
     }
-
-
-
-
-
-
-
-
 }//class
